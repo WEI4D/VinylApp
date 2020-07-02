@@ -1,0 +1,81 @@
+.user-detail {
+  position: absolute;
+  display: grid;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  right: 0;
+  grid-template-columns: 240px 560px;
+  grid-template-rows: 600px;
+  width: 240px;
+  height: 540px;
+  z-index: 20;
+  background-color: white; }
+  .user-detail .user-info-wrapper {
+    display: grid;
+    width: 240px;
+    height: 540px;
+    margin-top: -20px;
+    grid-template-rows: 240px 25px 40px 200px;
+    grid-row-gap: 5px;
+    color: white; }
+    .user-detail .user-info-wrapper .user-avatar {
+      width: 240px;
+      height: 240px;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .user-detail .user-info-wrapper .user-username, .user-detail .user-info-wrapper .user-signature, .user-detail .user-info-wrapper .user-info {
+      padding: 0 10px; }
+    .user-detail .user-info-wrapper .user-username {
+      height: 25px;
+      align-self: center;
+      margin-bottom: 0 !important; }
+      .user-detail .user-info-wrapper .user-username h1 {
+        width: 110px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: larger;
+        font-weight: bold; }
+    .user-detail .user-info-wrapper .user-signature {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      font-size: 10px;
+      color: rgba(0, 0, 0, 0.5); }
+    .user-detail .user-info-wrapper .user-info {
+      display: grid;
+      grid-template-columns: 30px 160px;
+      grid-template-rows: 20px 20px 150px;
+      grid-column-gap: 20px;
+      grid-row-gap: 5px;
+      color: black; }
+      .user-detail .user-info-wrapper .user-info .title {
+        color: rgba(0, 0, 0, 0.5); }
+      .user-detail .user-info-wrapper .user-info .ant-tag {
+        margin-bottom: 5px !important; }
+  .user-detail .placeholder {
+    background-color: transparent; }
+
+.user-detail-move-in {
+  animation: user-detail-move-in forwards .5s;
+  transform: translateZ(0);
+  display: grid !important; }
+
+.user-detail-move-out {
+  animation: user-detail-move-out forwards .5s;
+  transform: translateZ(0);
+  display: none; }
+
+@keyframes user-detail-move-in {
+  from {
+    left: -100%; }
+  to {
+    left: 0; } }
+@keyframes user-detail-move-out {
+  from {
+    left: 0; }
+  to {
+    left: -100%; } }
+
+/*# sourceMappingURL=userdetail.css.map */

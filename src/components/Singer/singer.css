@@ -1,0 +1,105 @@
+.singerC {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-rows: 230px 30px 280px;
+  grid-template-columns: 800px;
+  background-color: white;
+  z-index: 500; }
+  .singerC .singer-info-wrapper {
+    display: grid;
+    grid-template-columns: 230px 570px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../assets/images/singer-index-bg.jpg");
+    z-index: 500; }
+    .singerC .singer-info-wrapper .singer-cover {
+      align-self: center;
+      justify-self: center; }
+      .singerC .singer-info-wrapper .singer-cover > i {
+        display: block;
+        width: 165px;
+        height: 165px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 7px; }
+    .singerC .singer-info-wrapper .singer-info {
+      padding: 32.5px 10px 32.5px 0; }
+      .singerC .singer-info-wrapper .singer-info .singer-name > h1 {
+        font-size: x-large;
+        font-weight: bold;
+        color: white; }
+      .singerC .singer-info-wrapper .singer-info .singer-nation, .singerC .singer-info-wrapper .singer-info .singer-position {
+        color: #fff;
+        margin-bottom: 1em; }
+      .singerC .singer-info-wrapper .singer-info .singer-nation {
+        color: white; }
+    .singerC .singer-info-wrapper .mask {
+      position: absolute;
+      top: 0;
+      width: 800px;
+      height: 230px;
+      z-index: -50;
+      backdrop-filter: brightness(0.5); }
+  .singerC .song-bar {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-column-gap: 25px;
+    padding: 0 0 0 25px;
+    font-size: 15px; }
+    .singerC .song-bar > span {
+      justify-self: center;
+      align-self: center;
+      font-size: 1em;
+      cursor: default; }
+      .singerC .song-bar > span > a {
+        color: rgba(0, 0, 0, 0.5); }
+    .singerC .song-bar .song-bar-checked {
+      color: forestgreen;
+      border-bottom: 1px solid forestgreen; }
+  .singerC .singer-detail {
+    overflow: hidden scroll;
+    padding: 10px 35px 10px 25px; }
+    .singerC .singer-detail::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+      background-color: white; }
+    .singerC .singer-detail::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: white; }
+    .singerC .singer-detail::-webkit-scrollbar-thumb {
+      height: 0px;
+      border-radius: 0px;
+      background-color: rgba(0, 0, 0, 0.5); }
+  .singerC .ant-skeleton {
+    padding: 0 10px;
+    margin-top: 50px !important; }
+  .singerC .ant-skeleton-header .ant-skeleton-avatar-lg {
+    width: 80px;
+    height: 80px;
+    line-height: 80px; }
+
+.singerC-move-in {
+  animation: singerC-move-in .5s forwards;
+  transform: translateZ(0);
+  display: grid !important; }
+
+.singerC-move-out {
+  animation: singerC-move-out .5s forwards;
+  transform: translateZ(0);
+  display: none; }
+
+@keyframes singerC-move-in {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+@keyframes singerC-move-out {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+
+/*# sourceMappingURL=singer.css.map */

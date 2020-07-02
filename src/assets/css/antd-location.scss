@@ -1,0 +1,43 @@
+/*ANTD Location Component SCSS*/
+.right-local{
+  /*ANTD Downloaded List*/
+  .ant-table-thead > tr > th {
+    background-color: rgb(242, 242, 242);
+    //font-size: larger;
+    //font-weight: bolder;
+  }
+  .ant-table-tbody > tr >td:first-child {
+    max-width: 308px;
+    width: 55%;
+  }
+  .ant-table-tbody > tr >td:nth-child(2) {
+    max-width: 84px;
+    width: 15%;
+  }
+  .ant-table-tbody > tr >td:nth-child(3) {
+    max-width: 84px;
+    width: 15%;
+  }
+  .ant-table-tbody > tr >td:nth-child(4) {
+    max-width: 84px;
+    width: 15%;
+  }
+  .ant-table-tbody > tr >td {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+  .ant-table-wrapper {
+    background-color: white;
+  }
+  .ant-pagination.ant-table-pagination{
+    margin-right: 10px;
+  }
+  .ant-table-header-column{
+    width: 100%;
+  }
+  .ant-table-thead:hover .table-operation{
+    opacity: 1;
+    transition: all .5s;
+  }
+}

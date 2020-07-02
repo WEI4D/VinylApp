@@ -1,0 +1,41 @@
+@import url(../../assets/css/font.css);
+.user {
+  height: 100%; }
+  .user .music-function {
+    position: relative;
+    top: -50px;
+    right: 150px;
+    height: 80%;
+    opacity: 0; }
+    .user .music-function > div {
+      width: 200px;
+      height: 75px;
+      margin: 0px 0px;
+      font-family: "Undergrunge Tornado Demo";
+      font-size: 50px;
+      background-size: cover;
+      background-repeat: repeat;
+      cursor: default;
+      user-select: none; }
+    .user .music-function .podcast {
+      font-size: 50px; }
+    .user .music-function .playlist {
+      font-size: 50px; }
+  .user .music-function-move {
+    animation: music-function-move 0.5s forwards;
+    transform: translateZ(0); }
+
+@keyframes music-function-move {
+  from {
+    opacity: 0;
+    right: 150px; }
+  to {
+    opacity: 1;
+    right: 0; } }
+@font-face {
+  src: url("../../assets/font/AsiaOtasiUsual.ttf") format("ttf");
+  src: url("../../assets/font/AsiaOtasiUsual.otf") format("otf"); }
+@font-face {
+  src: url("../../assets/font/Undergrunge Tornado Demo.ttf") format("ttf"); }
+
+/*# sourceMappingURL=User.css.map */

@@ -1,0 +1,101 @@
+.about-vinyl{
+  display: grid;
+  grid-template-rows: 135px 135px 135px 135px;
+  width: 70%;
+  height: 100%;
+  background-color: olive;
+  font-size: 20px;
+  cursor: default;
+  user-select: none;
+  > div{
+    height: 25%;
+    width: 100%;
+  }
+  .favorite,.recommend,.recent,.rating{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 50px;
+    height: 135px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    >div{
+      position: relative;
+      height: 50px;
+      width: 100%;
+      .title{
+        position: absolute;
+        top: -8px;
+      }
+      .info{
+        font-size: 15px;
+      }
+    }
+    .wrapper{
+      z-index: 10;
+      .favorite-cover{
+        background-image: url("../../assets/images/favorite.png");
+      }
+      .recommend-cover{
+        position: relative;
+        background-image: url("../../assets/images/calendar.png");
+        font-style: normal;
+        //box-shadow: 0 0 20px 1px rgba(0,0,0,.5);
+        &:before{
+          content: attr(data-date);
+          position: absolute;
+          bottom: -5px;
+          display: block;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+        }
+      }
+      .recent-cover{
+        background-image: url("../../assets/images/hot.png");
+      }
+      .rating-cover{
+        background-image: url("../../assets/images/comment.png");
+      }
+    }
+    .blur-cover-favorite,.blur-cover-recommend,.blur-cover-recent,.blur-cover-rating{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 135px;
+      backdrop-filter: blur(2px) brightness(1);
+    }
+    p{
+      display: inline-block;
+      margin-bottom: 0;
+      margin-left: 20px;
+    }
+    i{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .favorite{
+    background-image: url("../../assets/images/favorite.jpg");
+  }
+  .recommend{
+    background: linear-gradient(70deg,rgb(255, 99, 0),rgb(255, 29, 228));
+    box-shadow: 10px 0px 15px rgba(0,0,0,1);
+    z-index: 1;
+  }
+  .recent{
+    position: relative;
+    background-image: url("../../assets/images/recommend.jpg");
+  }
+  .rating{
+    background-image: url("../../assets/images/rating.jpg");
+  }
+}

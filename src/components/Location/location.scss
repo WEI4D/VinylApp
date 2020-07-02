@@ -1,0 +1,96 @@
+@import "../../assets/css/antd-location";
+.local{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  overflow: hidden;
+  background-color: white;
+  color: #fff;
+  .local-left-menu{
+    position: relative;
+    padding: 40px 10px 0 25px;
+    width: 30%;
+    height: 100%;
+    background-color: forestgreen;
+    color: #fff;
+    font-size: larger;
+    font-weight: bold;
+    background-image: url("../../assets/images/p2567248684.jpg");
+    .local-left-menu-mask{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(20px) brightness(.3);
+      z-index: 80;
+    }
+  }
+  .right-local{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    color: white;
+    z-index: 350;
+  }
+  .menu-list{
+    position: absolute;
+    font-family: Undergrunge Tornado Demo;
+    font-size: 30px;
+    letter-spacing: 2px;
+    z-index: 90;
+    li{
+      list-style: none;
+      cursor: default;
+    }
+  }
+  .song{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+}
+.local-move-in{
+  animation: local-move-in 1s forwards;
+  transform: translateZ(0);
+  display: block !important;
+}
+
+.local-move-out{
+  animation: local-move-out 1s forwards;
+  transform: translateZ(0);
+  display: none;
+}
+
+@keyframes local-move-in {
+  from{
+    top: -100%;
+    visibility: hidden;
+  }
+  to{
+    top: 0;
+    visibility: visible;
+  }
+}
+
+@keyframes local-move-out {
+  from{
+    top: 0;
+    visibility: visible;
+    z-index: 100;
+  }
+  to{
+    top: -100%;
+    visibility: hidden;
+  }
+}

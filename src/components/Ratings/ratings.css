@@ -1,0 +1,41 @@
+/*
+Error: Invalid GBK character "\xE5"
+        on line 48 of ratings.scss
+
+43:         transform: translate(-50%,-50%);
+44:       }
+45:       &:before{
+46:         position: absolute;
+47:         left: 0;
+48:         content: "快来个彩虹屁吧~";
+49:         line-height: 80px;
+50:         padding: 0 0 0 10px;
+51:         color: rgba(255,255,255,.3);
+52:       }
+53:     }
+
+Backtrace:
+ratings.scss:48
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1090:in `rescue in block in find_encoding_error'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1087:in `block in find_encoding_error'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `each'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `each_with_index'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `find_encoding_error'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:820:in `rescue in check_sass_encoding'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:816:in `check_sass_encoding'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:444:in `check_encoding!'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:400:in `_to_tree'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+D:/Ruby23-x64/bin/sass:22:in `load'
+D:/Ruby23-x64/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE5\"\A         on line 48 of ratings.scss\A \A 43:         transform: translate(-50%,-50%);\A 44:       }\A 45:       &:before{\A 46:         position: absolute;\A 47:         left: 0;\A 48:         content: \"快来个彩虹屁吧~\";\A 49:         line-height: 80px;\A 50:         padding: 0 0 0 10px;\A 51:         color: rgba(255,255,255,.3);\A 52:       }\A 53:     }"; }

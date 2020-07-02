@@ -1,0 +1,158 @@
+.favorite-com {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-rows: 270px 270px;
+  grid-template-columns: 270px 270px 260px;
+  background-color: #fff;
+  z-index: 20; }
+  .favorite-com > .favorite-com-cover {
+    width: 270px;
+    height: 270px;
+    background-image: url("../../assets/images/podcast/2019-08-23-A-Lin-iPHONE.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .favorite-com > .favorite-com-combine-cover {
+    width: 270px;
+    height: 270px;
+    background-image: url("../../assets/images/favorite-combine-nine-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .favorite-com > .favorite-playing-music-info {
+    position: relative;
+    padding: 20px 0px 0 20px;
+    background: linear-gradient(45deg, #bc008d, #ff0000);
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em; }
+    .favorite-com > .favorite-playing-music-info > .music-info-base {
+      position: absolute;
+      right: 0;
+      background-color: #070943;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      font-size: .9em; }
+    .favorite-com > .favorite-playing-music-info > .album {
+      top: 40px;
+      min-width: 100px;
+      height: 40px;
+      line-height: 40px; }
+    .favorite-com > .favorite-playing-music-info > .artist {
+      top: 100px;
+      min-width: 90px;
+      height: 40px;
+      line-height: 40px; }
+  .favorite-com > .favorite-com-history-and-similar {
+    display: grid;
+    grid-template-rows: 115px 135px;
+    padding: 20px 0 0 20px;
+    z-index: 10000; }
+    .favorite-com > .favorite-com-history-and-similar .history-listen, .favorite-com > .favorite-com-history-and-similar .similar-listen {
+      font-size: 1.3em;
+      font-weight: bolder;
+      color: rgba(0, 0, 0, 0.7);
+      user-select: none; }
+    .favorite-com > .favorite-com-history-and-similar .history-list > span, .favorite-com > .favorite-com-history-and-similar .similar-list > span {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #ff1de4;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../../assets/images/avatar0.jpg");
+      margin: 0 10px; }
+    .favorite-com > .favorite-com-history-and-similar .history-list > span:first-child, .favorite-com > .favorite-com-history-and-similar .similar-list > span:first-child {
+      margin-left: 0 !important; }
+    .favorite-com > .favorite-com-history-and-similar .no-data {
+      font-size: .8em;
+      font-weight: normal;
+      text-align: left; }
+  .favorite-com > .favorite-music-content {
+    display: grid;
+    grid-template-rows: 35px;
+    grid-template-columns: 270px 170px 90px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 530px;
+    height: 270px;
+    box-shadow: 100px -10px 15px rgba(0, 0, 0, 0.5), 20px -2px 15px -13px rgba(0, 0, 0, 0.25) inset;
+    background-color: white; }
+    .favorite-com > .favorite-music-content .favorite-search {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+      .favorite-com > .favorite-music-content .favorite-search input {
+        padding: 0 10px;
+        width: 440px;
+        height: 35px;
+        outline: none;
+        border: none;
+        font-size: 1.2em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+    .favorite-com > .favorite-music-content > .duration {
+      line-height: 35px;
+      text-align: center;
+      background-color: white; }
+    .favorite-com > .favorite-music-content .favorite-music-list {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      overflow: hidden scroll; }
+      .favorite-com > .favorite-music-content .favorite-music-list .ant-skeleton {
+        margin-left: 12px; }
+      .favorite-com > .favorite-music-content .favorite-music-list .ant-skeleton-title {
+        height: 30px; }
+      .favorite-com > .favorite-music-content .favorite-music-list .ant-skeleton-content .ant-skeleton-paragraph > li {
+        height: 25px; }
+      .favorite-com > .favorite-music-content .favorite-music-list::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        background-color: #2b2a26; }
+      .favorite-com > .favorite-music-content .favorite-music-list::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: white; }
+      .favorite-com > .favorite-music-content .favorite-music-list::-webkit-scrollbar-thumb {
+        height: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1); }
+  .favorite-com > .favorite-music-content-more {
+    animation: favorite-music-content-more forwards;
+    transform: translateY(-225px);
+    transition: all .5s; }
+  .favorite-com > .favorite-music-content-less {
+    animation: favorite-music-content-less forwards;
+    transform: translateY(0px);
+    transition: all .5s; }
+
+.favorite-com-move-in {
+  animation: favorite-com-move-in .5s forwards;
+  display: grid !important; }
+
+.favorite-com-move-out {
+  animation: favorite-com-move-out .5s forwards;
+  transform: translateZ(0);
+  display: none; }
+
+@keyframes favorite-com-move-in {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+@keyframes favorite-com-move-out {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+@keyframes favorite-music-content-more {
+  from {
+    height: 270px; }
+  to {
+    height: 495px; } }
+@keyframes favorite-music-content-less {
+  from {
+    height: 495px; }
+  to {
+    height: 270px; } }
+
+/*# sourceMappingURL=favorite.css.map */

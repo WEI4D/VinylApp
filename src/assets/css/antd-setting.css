@@ -1,0 +1,21 @@
+.setting .ant-checkbox, .setting .ant-checkbox-checked, .setting .ant-checkbox-inner, .setting .ant-radio-inner {
+  width: 10px !important;
+  height: 10px !important; }
+.setting .ant-checkbox-inner::after {
+  width: 4px !important;
+  height: 6px !important; }
+.setting .ant-radio, .setting .ant-radio-checked {
+  vertical-align: initial; }
+.setting .ant-radio-inner::after {
+  width: 5px !important;
+  height: 5px !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important; }
+.setting span {
+  color: white !important; }
+.setting .ant-radio-wrapper, .setting .ant-radio-wrapper-checked {
+  vertical-align: top;
+  line-height: 21px !important; }
+
+/*# sourceMappingURL=antd-setting.css.map */

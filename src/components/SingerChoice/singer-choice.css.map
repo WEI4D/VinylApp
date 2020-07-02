@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAc;EACZ,OAAO,EAAE,IAAI;EACb,2CAA4B;IAC1B,OAAO,EAAE,IAAI;IACb,kBAAkB,EAAE,IAAI;IACxB,qBAAqB,EAAE,qBAAqB;EAE9C,8BAAgB;IACd,OAAO,EAAE,MAAM;IACf,UAAU,EAAE,cAAc",
+"sources": ["singer-choice.scss"],
+"names": [],
+"file": "singer-choice.css"
+}

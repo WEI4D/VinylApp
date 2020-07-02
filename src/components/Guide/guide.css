@@ -1,0 +1,68 @@
+.guide {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-columns: 800px;
+  grid-template-rows: 600px;
+  color: #fff;
+  z-index: 9999999999; }
+  .guide .title {
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 99999;
+    animation: text-fade-in-out  3s  infinite; }
+  .guide .mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 50;
+    background-color: #1b86db;
+    animation: to-brighter-to-darker 4s infinite; }
+  .guide .next {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    z-index: 99999; }
+
+@keyframes to-brighter-to-darker {
+  0% {
+    filter: brightness(1); }
+  50% {
+    filter: brightness(0.7); }
+  100% {
+    filter: brightness(1); } }
+@keyframes text-fade-in-out {
+  0% {
+    color: transparent; }
+  50% {
+    color: white; }
+  100% {
+    color: transparent; } }
+.guide-move-in {
+  animation: guide-move-in .5s forwards;
+  display: grid !important; }
+
+.guide-move-out {
+  animation: guide-move-out .5s forwards;
+  transform: translateZ(0);
+  display: none; }
+
+@keyframes guide-move-in {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+@keyframes guide-move-out {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+
+/*# sourceMappingURL=guide.css.map */

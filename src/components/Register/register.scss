@@ -1,0 +1,115 @@
+.register{
+  position: absolute;
+  display: grid;
+  grid-template-columns: 200px 400px 200px;
+  grid-template-rows: 600px;
+  top: -100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  width: 800px;
+  height: 600px;
+  background-color: forestgreen;
+  z-index: 99999999999;
+  .register-wrapper{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    p.title{
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 3.5em;
+      text-shadow: 0 1px #bbb, 0 2px #bbb, 0 3px #bbb, 0 4px #bbb, 0 5px #bbb, 0 6px transparent, 0 7px transparent, 0 8px transparent, 0 9px transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+    }
+    .register-form{
+      display: grid;
+      grid-template-rows: repeat(6,65px);
+      grid-template-columns: 400px;
+      color: #000;
+      justify-items: center;
+      >div:after{
+        display: block;
+        color: #fff;
+      }
+      .username-wrapper{
+        &:after{
+          content: attr(data-username-err);
+        }
+      }
+      .user-email-wrapper{
+        &:after{
+          content: attr(data-user-email-err);
+        }
+      }
+      .password-wrapper{
+        &:after{
+          content: attr(data-password-err);
+        }
+      }
+      .verify-password-wrapper{
+        &:after{
+          content: attr(data-verify-password-err);
+        }
+      }
+      .verify-code-wrapper{
+        &:after{
+          content: attr(data-verify-code-err);
+        }
+      }
+      input{
+        padding: 0 5px;
+        width: 380px;
+        height: 40px;
+        outline: none;
+        border-radius: 5px;
+        background-color: white;
+      }
+      input[name="verify-code"]{
+        width: 290px;
+        &+.send-code{
+          display: inline-block;
+          margin-left: 5px;
+          width: 85px;
+          height: 40px;
+          background-color: #55c555;
+          border: 1px solid #55c555;
+          color: #fff;
+          font-size: 14px;
+          cursor: pointer;
+          box-shadow: 0 0 2px rgba(0,0,0,.5);
+        }
+      }
+      input[name="submit"]{
+        font-size: 20px;
+        font-weight: bold;
+        color: #73c573;
+      }
+    }
+  }
+}
+.register-move-in{
+  animation: register-move-in forwards .5s;
+  transform: translateZ(0);
+  display: grid !important;
+}
+.register-move-out{
+  animation: register-move-out forwards .5s;
+  transform: translateZ(0);
+  display: none;
+}
+@keyframes register-move-in {
+  from{
+    top: -100%;
+  }
+  to{
+    top: 0;
+  }
+}
+@keyframes register-move-out {
+  from{
+    top: 0;
+  }
+  to{
+    top: -100%;
+  }
+}

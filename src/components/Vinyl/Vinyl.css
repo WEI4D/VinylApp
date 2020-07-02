@@ -1,0 +1,83 @@
+.about-vinyl {
+  display: grid;
+  grid-template-rows: 135px 135px 135px 135px;
+  width: 70%;
+  height: 100%;
+  background-color: olive;
+  font-size: 20px;
+  cursor: default;
+  user-select: none; }
+  .about-vinyl > div {
+    height: 25%;
+    width: 100%; }
+  .about-vinyl .favorite, .about-vinyl .recommend, .about-vinyl .recent, .about-vinyl .rating {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 50px;
+    height: 135px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box; }
+    .about-vinyl .favorite > div, .about-vinyl .recommend > div, .about-vinyl .recent > div, .about-vinyl .rating > div {
+      position: relative;
+      height: 50px;
+      width: 100%; }
+      .about-vinyl .favorite > div .title, .about-vinyl .recommend > div .title, .about-vinyl .recent > div .title, .about-vinyl .rating > div .title {
+        position: absolute;
+        top: -8px; }
+      .about-vinyl .favorite > div .info, .about-vinyl .recommend > div .info, .about-vinyl .recent > div .info, .about-vinyl .rating > div .info {
+        font-size: 15px; }
+    .about-vinyl .favorite .wrapper, .about-vinyl .recommend .wrapper, .about-vinyl .recent .wrapper, .about-vinyl .rating .wrapper {
+      z-index: 10; }
+      .about-vinyl .favorite .wrapper .favorite-cover, .about-vinyl .recommend .wrapper .favorite-cover, .about-vinyl .recent .wrapper .favorite-cover, .about-vinyl .rating .wrapper .favorite-cover {
+        background-image: url("../../assets/images/favorite.png"); }
+      .about-vinyl .favorite .wrapper .recommend-cover, .about-vinyl .recommend .wrapper .recommend-cover, .about-vinyl .recent .wrapper .recommend-cover, .about-vinyl .rating .wrapper .recommend-cover {
+        position: relative;
+        background-image: url("../../assets/images/calendar.png");
+        font-style: normal; }
+        .about-vinyl .favorite .wrapper .recommend-cover:before, .about-vinyl .recommend .wrapper .recommend-cover:before, .about-vinyl .recent .wrapper .recommend-cover:before, .about-vinyl .rating .wrapper .recommend-cover:before {
+          content: attr(data-date);
+          position: absolute;
+          bottom: -5px;
+          display: block;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center; }
+      .about-vinyl .favorite .wrapper .recent-cover, .about-vinyl .recommend .wrapper .recent-cover, .about-vinyl .recent .wrapper .recent-cover, .about-vinyl .rating .wrapper .recent-cover {
+        background-image: url("../../assets/images/hot.png"); }
+      .about-vinyl .favorite .wrapper .rating-cover, .about-vinyl .recommend .wrapper .rating-cover, .about-vinyl .recent .wrapper .rating-cover, .about-vinyl .rating .wrapper .rating-cover {
+        background-image: url("../../assets/images/comment.png"); }
+    .about-vinyl .favorite .blur-cover-favorite, .about-vinyl .favorite .blur-cover-recommend, .about-vinyl .favorite .blur-cover-recent, .about-vinyl .favorite .blur-cover-rating, .about-vinyl .recommend .blur-cover-favorite, .about-vinyl .recommend .blur-cover-recommend, .about-vinyl .recommend .blur-cover-recent, .about-vinyl .recommend .blur-cover-rating, .about-vinyl .recent .blur-cover-favorite, .about-vinyl .recent .blur-cover-recommend, .about-vinyl .recent .blur-cover-recent, .about-vinyl .recent .blur-cover-rating, .about-vinyl .rating .blur-cover-favorite, .about-vinyl .rating .blur-cover-recommend, .about-vinyl .rating .blur-cover-recent, .about-vinyl .rating .blur-cover-rating {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 135px;
+      backdrop-filter: blur(2px) brightness(1); }
+    .about-vinyl .favorite p, .about-vinyl .recommend p, .about-vinyl .recent p, .about-vinyl .rating p {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-left: 20px; }
+    .about-vinyl .favorite i, .about-vinyl .recommend i, .about-vinyl .recent i, .about-vinyl .rating i {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .about-vinyl .favorite {
+    background-image: url("../../assets/images/favorite.jpg"); }
+  .about-vinyl .recommend {
+    background: linear-gradient(70deg, #ff6300, #ff1de4);
+    box-shadow: 10px 0px 15px black;
+    z-index: 1; }
+  .about-vinyl .recent {
+    position: relative;
+    background-image: url("../../assets/images/recommend.jpg"); }
+  .about-vinyl .rating {
+    background-image: url("../../assets/images/rating.jpg"); }
+
+/*# sourceMappingURL=Vinyl.css.map */

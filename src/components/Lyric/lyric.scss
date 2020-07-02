@@ -1,0 +1,104 @@
+.lyric{
+  position: absolute;
+  display: grid;
+  grid-template-columns: 365px 435px;
+  grid-template-rows: 540px 540px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 220;
+  color: #fff;
+  visibility: hidden;
+  width: 800px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .left-lyric{
+    z-index: 220;
+    justify-self: center;
+    align-self: center;
+    //align-self: center;
+    .song-cover{
+      width: 280px;
+      height: 280px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .right-lyric{
+    z-index: 220;
+    justify-self: center;
+    align-self: center;
+    .lyric-wrapper{
+      .lyric-mask{
+        height: 270px;
+        padding: 20px 0;
+        overflow: hidden scroll;
+        >p{
+          text-align: center;
+          }
+        .playing{
+          color: salmon;
+        }
+        &::-webkit-scrollbar {
+          width: 2px;
+          height: 2px;
+          background-color: rgba(255, 255, 255,0);
+        }
+
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          background-color: rgba(255, 255, 255, 0);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          height: 20px;
+          border-radius: 10px;
+          background-color: rgba(255, 255, 255, 0);
+        }
+      }
+    }
+  }
+  .mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(30px) brightness(.5);
+    z-index: 200;
+  }
+}
+
+.lyric-move-in{
+  animation: lyric-move-in .5s forwards;
+  display: grid !important;
+}
+
+.lyric-move-out{
+  animation: lyric-move-out .5s forwards;
+  display: none;
+}
+
+
+@keyframes lyric-move-in {
+  from{
+    top: -100%;
+    visibility: hidden;
+  }
+  to{
+    top: 0;
+    visibility: visible;
+  }
+}
+
+@keyframes lyric-move-out {
+  from{
+    top: 0;
+    visibility: visible;
+  }
+  to{
+    top: -100%;
+    visibility: hidden;
+  }
+}
+

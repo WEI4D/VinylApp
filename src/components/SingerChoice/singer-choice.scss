@@ -1,0 +1,12 @@
+.singer-choice{
+  display: grid;
+  > .favorite-music-list-child{
+    display: grid;
+    grid-template-rows: 35px;
+    grid-template-columns: 50px 380px 100px 50px;
+  }
+  > .ant-skeleton {
+    padding: 0 10px;
+    margin-top: 0px !important;
+  }
+}

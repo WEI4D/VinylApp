@@ -1,0 +1,79 @@
+.favorite-music-list-child{
+  display: grid;
+  grid-template-columns: 90px 330px 90px;
+  grid-template-rows: 40px;
+  grid-column-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  .number-desc{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: rgba(0,0,0,.5);
+    &.playing{
+      background: linear-gradient(45deg, #bc008d, #ff0000);
+      box-shadow: 0 0 5px rgba(255, 0, 0,1);
+      color: #fff;
+    }
+  }
+  .song-name{
+    display: grid;
+    grid-template-rows: 40px;
+    grid-template-columns: 230px 100px;
+    &:before{
+      content: attr(data-name);
+      align-self: center;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .operator-list{
+
+    }
+    > label{
+      display: grid;
+      grid-template-rows: 40px;
+      grid-template-columns: repeat(4,25px);
+      visibility: hidden;
+      > span{
+        align-self: center;
+        &:hover{
+          color: #9f5e26;
+        }
+      }
+    }
+    &:hover .operator-list{
+      visibility: visible;
+    }
+    &.song-name-playing{
+      &:before{
+        color: #9f5e26;
+      }
+    }
+  }
+  >.duration{
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+}
+.add-to-drawer{
+  position: relative;
+  left: -10px;
+  width: 110px;
+  height: 150px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  &.add-to-drawer-disappear{
+    opacity: 0;
+  }
+}

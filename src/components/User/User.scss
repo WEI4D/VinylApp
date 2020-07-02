@@ -1,0 +1,63 @@
+@import "../../assets/css/font.css";
+.user{
+  height: 100%;
+  .music-function{
+    position: relative;
+    top: -50px;
+    right: 150px;
+    height: 80%;
+    opacity: 0;
+    >div{
+      width: 200px;
+      height: 75px;
+      margin: 0px 0px;
+      font-family: "Undergrunge Tornado Demo";
+      font-size: 50px;
+      background-size: cover;
+      background-repeat: repeat;
+      cursor: default;
+      user-select: none;
+    }
+    .search{
+      //background-image: url("../../assets/images/search.png");
+    }
+    .podcast{
+      //background-image: url("../../assets/images/podcast.png");
+      font-size: 50px;
+    }
+    .vinyl{
+      //background-image: url("../../assets/images/vinyl.png");
+    }
+    .local-music{
+      //background-image: url("../../assets/images/local-music.png");
+    }
+    .playlist{
+      //background-image: url("../../assets/images/playlist.png");
+      font-size: 50px;
+    }
+  }
+  .music-function-move{
+    animation: music-function-move 0.5s forwards;
+    transform: translateZ(0);
+  }
+}
+@keyframes music-function-move {
+  from{
+    opacity: 0;
+    right: 150px;
+  }
+  to{
+    opacity: 1;
+    right: 0;
+  }
+}
+@font-face {
+  //font-family: "AsiaOtasiUsual";
+  src: url("../../assets/font/AsiaOtasiUsual.ttf") format('ttf');
+  src: url("../../assets/font/AsiaOtasiUsual.otf") format('otf');
+}
+
+@font-face {
+  //font-family: "Undergrunge Tornado Demo";
+  src: url("../../assets/font/Undergrunge Tornado Demo.ttf") format('ttf');
+}

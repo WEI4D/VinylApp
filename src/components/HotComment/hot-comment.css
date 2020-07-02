@@ -1,0 +1,91 @@
+.hot-comment {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-rows: 540px;
+  grid-template-columns: 800px;
+  z-index: 200; }
+  .hot-comment > .comment-wrapper {
+    padding: 35px 30px 10px 30px;
+    background-color: #f6f6f6; }
+    .hot-comment > .comment-wrapper > .title {
+      font-size: 20px;
+      font-weight: 600; }
+    .hot-comment > .comment-wrapper .comment-set {
+      margin-top: 10px;
+      overflow-y: scroll;
+      height: 450px; }
+      .hot-comment > .comment-wrapper .comment-set::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+        background-color: rgba(43, 42, 38, 0); }
+      .hot-comment > .comment-wrapper .comment-set::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: rgba(43, 42, 38, 0); }
+      .hot-comment > .comment-wrapper .comment-set::-webkit-scrollbar-thumb {
+        height: 20px;
+        border-radius: 10px;
+        background-color: rgba(43, 42, 38, 0); }
+      .hot-comment > .comment-wrapper .comment-set > div {
+        margin-bottom: 15px;
+        background-color: #fff;
+        height: 90px; }
+      .hot-comment > .comment-wrapper .comment-set .comment-child {
+        padding: 10px 10px; }
+        .hot-comment > .comment-wrapper .comment-set .comment-child > .cover-wrapper {
+          position: relative;
+          width: 150px;
+          height: 25px; }
+          .hot-comment > .comment-wrapper .comment-set .comment-child > .cover-wrapper:after {
+            content: attr(data-name);
+            width: 20px;
+            height: 25px;
+            line-height: 25px; }
+          .hot-comment > .comment-wrapper .comment-set .comment-child > .cover-wrapper i {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("../../assets/images/avatar0.jpg"); }
+          .hot-comment > .comment-wrapper .comment-set .comment-child > .cover-wrapper span {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: inline-block;
+            width: 100px;
+            height: 25px;
+            line-height: 25px;
+            margin-left: 10px; }
+        .hot-comment > .comment-wrapper .comment-set .comment-child > .comment-content {
+          padding: 0 0 0 35px;
+          margin-top: 5px; }
+        .hot-comment > .comment-wrapper .comment-set .comment-child .icon-set {
+          margin-top: 5px;
+          padding: 0 0 0 35px;
+          font-size: 12px; }
+
+.hot-comment-move-in {
+  animation: hot-comment-move-in .5s forwards;
+  display: grid !important;
+  z-index: 10 !important; }
+
+.hot-comment-move-out {
+  animation: hot-comment-move-out .5s forwards;
+  transform: translateZ(0);
+  display: none; }
+
+@keyframes hot-comment-move-in {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+@keyframes hot-comment-move-out {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+
+/*# sourceMappingURL=hot-comment.css.map */

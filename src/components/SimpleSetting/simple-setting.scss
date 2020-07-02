@@ -1,0 +1,12 @@
+.simple-setting{
+  display: grid;
+  grid-template-rows: 40px;
+  .title{
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+  }
+  .box-wrapper{
+    margin-top: 10px;
+  }
+}

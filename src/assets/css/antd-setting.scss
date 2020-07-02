@@ -1,0 +1,31 @@
+.setting{
+  .ant-checkbox,.ant-checkbox-checked,.ant-checkbox-inner,.ant-radio-inner{
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .ant-checkbox-inner{
+    &::after{
+      width: 4px !important;
+      height: 6px !important;
+    }
+  }
+  .ant-radio,.ant-radio-checked{
+    vertical-align: initial;
+  }
+  .ant-radio-inner{
+    &::after{
+      width: 5px !important;
+      height: 5px !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%,-50%) !important;
+    }
+  }
+  span{
+    color: white !important;
+  }
+  .ant-radio-wrapper,.ant-radio-wrapper-checked{
+    vertical-align: top;
+    line-height: 21px !important;
+  }
+}

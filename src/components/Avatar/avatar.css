@@ -1,0 +1,51 @@
+.login-wrapper .login-body {
+  box-shadow: 0 0 20px black; }
+  .login-wrapper .login-body .user-avatar {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5); }
+  .login-wrapper .login-body .avatar-move-to-top-left {
+    animation: avatar-move-to-top-left .5s forwards; }
+    .login-wrapper .login-body .avatar-move-to-top-left .message-bubble {
+      position: relative;
+      top: -5px;
+      left: 35px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #ff0202;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      text-align: center; }
+      .login-wrapper .login-body .avatar-move-to-top-left .message-bubble::after {
+        content: "99";
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center; }
+    .login-wrapper .login-body .avatar-move-to-top-left::after {
+      content: attr(data-username);
+      position: absolute;
+      top: 50%;
+      left: 65px;
+      transform: translate(0, -50%);
+      min-width: 170px;
+      font-size: 22px; }
+
+@keyframes avatar-move-to-top-left {
+  from {
+    transform: translate(0px, 0px) scale(1); }
+  to {
+    transform: translate(-90px, -40px) scale(0.7); } }
+
+/*# sourceMappingURL=avatar.css.map */

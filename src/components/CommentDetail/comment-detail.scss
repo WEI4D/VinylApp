@@ -1,0 +1,101 @@
+.comment-detail{
+  display: grid;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  z-index: 500;
+  grid-template-rows: 70px 530px;
+  .comment-detail-wrapper{
+    display: grid;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-template-rows: 30px 480px;
+    grid-template-columns: 780px;
+    padding: 10px 10px;
+    background-color: rgba(0,0,0,.8);
+    z-index: 100;
+    .close-comment-detail{
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      text-align: right;
+      cursor: default;
+    }
+    .comment-detail-list-wrapper{
+      display: grid;
+      grid-template-rows: 100px 310px;
+      grid-row-gap: 10px;
+      .comment-detail-top-level{
+        > div{
+          border: none;
+        }
+      }
+      .comment-detail-list{
+        overflow: hidden scroll;
+        &::-webkit-scrollbar {
+          width: 2px;
+          height: 2px;
+          background-color: rgba(255, 255, 255,0);
+        }
+
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          background-color: rgba(255, 255, 255,0);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          height: 20px;
+          border-radius: 10px;
+          background-color: rgba(0,0,0,0);
+        }
+        //display: grid;
+        //grid-template-columns: 50px 730px;
+        //margin-bottom: 1em;
+        //border-bottom: 1px solid rgba(255,255,255,.1);
+        //padding: 0 0 10px 0;
+      }
+    }
+  }
+  .mask{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: brightness(.5) blur(20px);
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    z-index: 80;
+  }
+}
+.comment-detail-move-in{
+  animation: comment-detail-move-in 0.5s forwards;
+  transform: translateZ(0);
+  display: grid !important;
+}
+.comment-detail-move-out{
+  animation: comment-detail-move-out 0.5s forwards;
+  transform: translateZ(0);
+  display: none;
+}
+@keyframes comment-detail-move-in {
+  from{
+    bottom: -100%;
+  }
+  to{
+    bottom: 0;
+  }
+}
+@keyframes comment-detail-move-out {
+  from{
+    bottom: 0;
+  }
+  to{
+    bottom: -100%;
+  }
+}

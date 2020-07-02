@@ -1,0 +1,11 @@
+.simple-setting {
+  display: grid;
+  grid-template-rows: 40px; }
+  .simple-setting .title {
+    font-size: larger;
+    font-weight: bold;
+    color: white; }
+  .simple-setting .box-wrapper {
+    margin-top: 10px; }
+
+/*# sourceMappingURL=simple-setting.css.map */

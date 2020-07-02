@@ -1,0 +1,108 @@
+.camp {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-template-rows: 50px 500px;
+  grid-template-columns: 50px 740px;
+  grid-column-gap: 20px;
+  background-color: #f6f6f6;
+  z-index: 20; }
+  .camp .camp-title {
+    align-self: center;
+    font-size: 20px;
+    font-weight: 600;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; }
+  .camp .tools-nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 40px repeat(10, 50px);
+    justify-items: center;
+    align-items: center; }
+    .camp .tools-nav > div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: #1b1b1b; }
+      .camp .tools-nav > div > i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .camp .tools-nav .send {
+      grid-row-start: 3;
+      border-top-right-radius: 10px; }
+    .camp .tools-nav .follow {
+      border-bottom-right-radius: 10px; }
+  .camp .camp-content {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    padding-right: 20px;
+    grid-row-gap: 5px;
+    overflow-y: scroll; }
+    .camp .camp-content::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+      background-color: #2b2a26; }
+    .camp .camp-content::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: #2b2a26; }
+    .camp .camp-content::-webkit-scrollbar-thumb {
+      height: 20px;
+      border-radius: 10px;
+      background-color: #2b2a26; }
+    .camp .camp-content .music-note {
+      display: grid;
+      grid-template-columns: 50px 560px 100px;
+      grid-column-gap: 4px;
+      margin-bottom: 30px;
+      width: 100%;
+      height: 50px;
+      border-radius: 5px;
+      background-color: white; }
+      .camp .camp-content .music-note .camp-user-cover {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url("../../assets/images/favorite-combine-nine-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px; }
+      .camp .camp-content .music-note .camp-word {
+        font-size: 14px;
+        align-self: center; }
+      .camp .camp-content .music-note .star-follow {
+        display: grid;
+        grid-template-columns: 50px 50px;
+        grid-template-rows: 50px;
+        justify-items: center;
+        align-items: center; }
+
+.camp-move-in {
+  animation: camp-move-in .5s forwards;
+  display: grid !important; }
+
+.camp-move-out {
+  animation: camp-move-out .5s forwards;
+  transform: translateZ(0);
+  display: none; }
+
+@keyframes camp-move-in {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+@keyframes camp-move-out {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+
+/*# sourceMappingURL=camp.css.map */

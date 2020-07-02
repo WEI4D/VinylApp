@@ -1,0 +1,89 @@
+.setting{
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-rows: 540px 60px;
+  grid-template-columns: 240px 560px;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 999999999;
+  .left{
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: 2px dashed rgba(0,0,0,.4);
+    border-right: none;
+    //border-bottom: none;
+    background-size: cover;
+    background-image: url("../../assets/images/wallhaven-r2qqlj.jpg");
+    background-repeat: no-repeat;
+    z-index: 1000;
+    .mask{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      bottom: 0;
+      right: 0;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100%;
+      backdrop-filter:blur(10px);
+      z-index: -1;
+    }
+  }
+  .right{
+    display: grid;
+    grid-template-rows: repeat(4,134.5px);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: 2px dashed rgba(0,0,0,.4);
+    border-bottom: none;
+    z-index: 1000;
+    > div{
+      position: relative;
+      border-bottom: 2px dashed rgba(0,0,0,.4);
+      z-index: 1000;
+    }
+  }
+  .bottom{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #11abe9;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+  }
+}
+.setting-move-in{
+  animation: setting-move-in .5s forwards;
+  display: grid !important;
+}
+.setting-move-out{
+  animation: setting-move-out .5s forwards;
+  display: none;
+}
+@keyframes setting-move-in {
+  from{
+    top: -100%;
+  }
+  to{
+    top: 0;
+  }
+}
+@keyframes setting-move-out {
+  from{
+    top: 0;
+  }
+  to{
+    top: -100%;
+  }
+}

@@ -1,0 +1,55 @@
+.setting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-rows: 45px 495px;
+  grid-template-columns: 140px 625px;
+  grid-column-gap: 10px;
+  background-color: #1b1b1b;
+  z-index: 1000; }
+  .setting .setting-left-menu {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: white;
+    font-size: 1.1em;
+    border-right: 2px solid #bababa; }
+    .setting .setting-left-menu > div {
+      margin: 10px 0; }
+      .setting .setting-left-menu > div:first-child {
+        margin: 0; }
+      .setting .setting-left-menu > div > a {
+        color: white; }
+        .setting .setting-left-menu > div > a:before {
+          content: attr(data-target);
+          display: inline-block;
+          width: 21px;
+          height: 21px;
+          vertical-align: top; }
+  .setting .setting-content {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3; }
+
+.setting-move-in {
+  animation: setting-move-in .5s forwards;
+  display: grid !important; }
+
+.setting-move-out {
+  animation: setting-move-out .5s forwards;
+  display: none; }
+
+@keyframes setting-move-in {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+@keyframes setting-move-out {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+
+/*# sourceMappingURL=setting.css.map */

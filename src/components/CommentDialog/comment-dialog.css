@@ -1,0 +1,96 @@
+.comment-dialog {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 550;
+  grid-template-rows: 40px 340px 160px;
+  grid-template-columns: 100px 600px 100px; }
+  .comment-dialog .comment-dialog-wrapper {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-rows: 40px 300px;
+    grid-template-columns: 570px 30px;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+    .comment-dialog .comment-dialog-wrapper h1.title, .comment-dialog .comment-dialog-wrapper span.close {
+      line-height: 40px;
+      text-align: center;
+      margin-bottom: 0; }
+    .comment-dialog .comment-dialog-wrapper h1.title {
+      padding: 0 10px;
+      text-align: left;
+      font-size: 16px; }
+    .comment-dialog .comment-dialog-wrapper span.close {
+      color: red;
+      cursor: default; }
+    .comment-dialog .comment-dialog-wrapper .text-wrapper {
+      display: grid;
+      grid-template-rows: 260px 35px;
+      grid-template-columns: 580px;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      padding: 0 10px;
+      grid-row-gap: 5px; }
+      .comment-dialog .comment-dialog-wrapper .text-wrapper textarea {
+        padding: 10px 10px;
+        outline: none;
+        border-radius: 3px;
+        resize: none;
+        background-color: #fff;
+        color: #000;
+        font-size: 15px; }
+      .comment-dialog .comment-dialog-wrapper .text-wrapper .text-operator {
+        display: grid;
+        grid-template-columns: 270px 270px;
+        grid-column-start: 1;
+        grid-column-end: 4; }
+        .comment-dialog .comment-dialog-wrapper .text-wrapper .text-operator .express-tools {
+          width: 35px; }
+        .comment-dialog .comment-dialog-wrapper .text-wrapper .text-operator .publish-button {
+          justify-self: right;
+          grid-column-start: 2;
+          grid-column-end: 4; }
+          .comment-dialog .comment-dialog-wrapper .text-wrapper .text-operator .publish-button > input {
+            width: 100px;
+            height: 30px;
+            outline: none;
+            border: none;
+            background-color: #ff0000;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer; }
+            .comment-dialog .comment-dialog-wrapper .text-wrapper .text-operator .publish-button > input:hover {
+              background-color: #ff4040;
+              transition: all 0.5s; }
+
+.comment-dialog-move-in {
+  animation: comment-dialog-move-in 0.5s forwards;
+  transform: translateZ(0);
+  display: grid !important; }
+
+.comment-dialog-move-out {
+  animation: comment-dialog-move-out 0.5s forwards;
+  transform: translateZ(0);
+  display: none; }
+
+@keyframes comment-dialog-move-in {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+@keyframes comment-dialog-move-out {
+  from {
+    top: 0; }
+  to {
+    top: -100%; } }
+
+/*# sourceMappingURL=comment-dialog.css.map */

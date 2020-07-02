@@ -1,0 +1,146 @@
+.playlist-detail{
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  grid-template-rows: 230px 30px 280px;
+  grid-template-columns: 800px;
+  .playlist-detail-info-wrapper{
+    display: grid;
+    grid-template-columns: 230px 570px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/images/wallhaven-zmdr9j.jpg");
+    .playlist-cover{
+      display: inline-block;
+      align-self: center;
+      justify-self: center;
+      width: 165px;
+      height: 165px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../../assets/images/avatar0.jpg");
+      border-radius: 5px;
+      z-index: 550;
+    }
+    .playlist-info{
+      padding: 25px 10px 32.5px 0;
+      z-index: 550;
+      .playlist-name{
+        > h1 {
+          font-size: x-large;
+          font-weight: bold;
+          color: black;
+        }
+      }
+      .playlist-user{
+        display: grid;
+        grid-template-columns: 25px 100px;
+        grid-column-gap: 10px;
+        margin-bottom: 0.5em;
+        .user-cover{
+          display: inline-block;
+          align-self: center;
+          width: 25px;
+          height: 25px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 50%;
+        }
+        .username{
+          align-self: center;
+          height: 25px;
+          line-height: 25px;
+        }
+      }
+      .playlist-word{
+        width: 560px;
+        height: 50px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: pre-wrap;
+        margin-bottom: 0.5em;
+        vertical-align: bottom;
+      }
+      .editor{
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+  .playlist-detail-nav-bar{
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 35px;
+    color: black;
+    background-color: white;
+    z-index: 10;
+  }
+  .playlist-detail-list{
+    overflow: hidden scroll;
+    background-color: white;
+    z-index: 100;
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+      background-color: rgb(43, 42, 38);
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: rgb(43, 42, 38);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      height: 20px;
+      border-radius: 10px;
+      background-color: rgb(43, 42, 38);
+    }
+  }
+  .mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 800px;
+    height: 230px;
+    backdrop-filter: blur(15px);
+    z-index: 500;
+  }
+}
+
+.playlist-detail-move-in{
+  animation: playlist-right-block-move-in .5s forwards;
+  transform: translateZ(0);
+  display: grid !important;
+}
+
+.playlist-detail-move-out{
+  animation: playlist-right-block-move-out .5s forwards;
+  transform: translateZ(0);
+  display: none;
+}
+
+@keyframes playlist-detail-move-in {
+  from{
+    top: -100%;
+  }
+  to{
+    top: 0;
+  }
+}
+
+@keyframes playlist-detail-move-out {
+  from{
+    top: 0;
+  }
+  to{
+    top: -100%;
+  }
+}

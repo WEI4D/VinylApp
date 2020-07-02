@@ -1,0 +1,11 @@
+.singer-song {
+  display: grid; }
+  .singer-song > .favorite-music-list-child {
+    display: grid;
+    grid-template-rows: 35px;
+    grid-template-columns: 50px 380px 100px 50px; }
+  .singer-song > .ant-skeleton {
+    padding: 0 10px;
+    margin-top: 0px !important; }
+
+/*# sourceMappingURL=singer-song.css.map */

@@ -1,0 +1,50 @@
+.rating-list {
+  display: grid;
+  grid-template-columns: 50px 730px;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 0 10px 0; }
+  .rating-list .user-name .comment-detail-triangle-char-icon {
+    margin: 0 10px; }
+    .rating-list .user-name .comment-detail-triangle-char-icon > i {
+      vertical-align: baseline; }
+    .rating-list .user-name .comment-detail-triangle-char-icon:after {
+      content: attr(data-reply);
+      display: inline-block;
+      margin-left: 10px; }
+  .rating-list .user-rating {
+    padding: 0 10px 0 0;
+    width: 720px;
+    text-justify: newspaper;
+    word-break: break-all;
+    text-align: justify; }
+  .rating-list .user-rating-wrapper {
+    color: #fff; }
+    .rating-list .user-rating-wrapper .user-publish-info {
+      position: relative;
+      width: 710px; }
+      .rating-list .user-rating-wrapper .user-publish-info .date {
+        display: inline-block;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5); }
+      .rating-list .user-rating-wrapper .user-publish-info .interaction-count {
+        position: absolute;
+        right: 100px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px; }
+      .rating-list .user-rating-wrapper .user-publish-info .star-and-reply {
+        position: absolute;
+        right: -9px;
+        display: inline-block; }
+        .rating-list .user-rating-wrapper .user-publish-info .star-and-reply > span {
+          margin: 0 5px; }
+  .rating-list .user-avatar > i {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+/*# sourceMappingURL=comment-list.css.map */

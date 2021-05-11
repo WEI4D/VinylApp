@@ -19,7 +19,7 @@
     "http-proxy-middleware": "^0.20.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lrc-file-parser": "^1.0.0",
     "md5": "^2.2.1",
     "node-id3": "^0.1.11",
